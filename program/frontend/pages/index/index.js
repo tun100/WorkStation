@@ -15,7 +15,7 @@ window.moment = moment
 window.STORE = mobx_store
 window.STORE_PAGE = mobx_page
 window.utils = utils
-window.axios = axios;
+window.axios = axios
 window.enterdevmode = () => {
   localStorage.setItem('DEV_MODE', 'yes')
 }
@@ -26,15 +26,12 @@ utils.storepage = mobx_page
 utils.info.title = `WorkStation-工作站`
 document.title = utils.info.title
 
-// execute task in dev mode
-if (utils.isdev()) {
-  utils.defer(() => {
-    mobx_store.action_login({
-      username: utils.info.user,
-      password: utils.info.password
-    })
-  }, 1000)
+// invoke init func immediately
+async function initFunc () {
+  // var status = await utils.get('/api/system/status')
+  // _.merge(mobx_store.login_info, status)
 }
+initFunc()
 
 // mount react dom
 ReactDOM.render(

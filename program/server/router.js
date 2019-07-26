@@ -11,7 +11,7 @@ const router = new Router({
 router.get('/system/status', async ctx => {
   var userCtn = await dbutils.count(`select * from wst_user`)
   httpUtils.ok(ctx, {
-    needRegister: userCtn === 0
+    is_init: userCtn === 0
   })
 })
 

@@ -1,10 +1,15 @@
 const { flow, transaction } = mobx
+
+function commonResHandler(res){
+  return res.data;
+}
+
 const crtUtils = {
   get (...args) {
-    return axios.get(...args)
+    return commonResHandler(axios.get(...args)) 
   },
   post (...args) {
-    return axios.get(...args)
+    return commonResHandler(axios.post(...args)) 
   },
   defer (func, timeval) {
     return setTimeout(func, timeval)

@@ -5,7 +5,7 @@ var { observer } = mobxReact;
 class GlobalStore {
 	@observable timestamp = utils.now();
 	@observable login_info = {
-		is_login: false,
+		is_login: true, // default login
 		user_info: {
 			username: null,
 			password: null,
