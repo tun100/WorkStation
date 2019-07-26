@@ -15,6 +15,7 @@ window.moment = moment
 window.STORE = mobx_store
 window.STORE_PAGE = mobx_page
 window.utils = utils
+window.axios = axios;
 window.enterdevmode = () => {
   localStorage.setItem('DEV_MODE', 'yes')
 }
@@ -22,9 +23,7 @@ window.enterdevmode = () => {
 // initialize application info
 utils.store = mobx_store
 utils.storepage = mobx_page
-utils.info.title = `Web实时监控管理系统(v1.0)`
-utils.info.user = 'admin'
-utils.info.password = '123456'
+utils.info.title = `WorkStation-工作站`
 document.title = utils.info.title
 
 // execute task in dev mode

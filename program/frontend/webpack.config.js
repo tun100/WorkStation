@@ -94,7 +94,7 @@ module.exports = mode => {
       publicPath: '/',
       contentBase: utils.getCrtPath(distFolderName),
       compress: true,
-      port: 3000
+      port: 10010
     },
     entry: entryobj,
     resolve: {

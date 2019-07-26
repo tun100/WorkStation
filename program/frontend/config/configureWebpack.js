@@ -10,6 +10,7 @@ module.exports = (conf, mode) => {
       react: 'react',
       React: 'react',
       crc: 'create-react-class',
+      axios: 'axios',
       mobx: 'mobx',
       rr: 'react-router',
       antd: 'antd',
